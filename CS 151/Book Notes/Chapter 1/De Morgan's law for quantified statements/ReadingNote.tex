@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 1.8 Notes:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{1.8 De Morgan's Law for Quantified Statements}
+\subsection*{De Morgan's Law for Quantified Statements}
+The negation operation can be applied to a quantified statement, such as $\neg \forall x F(x)$ or $\neg \exists x F(x)$. If 
+the domain for the variable $x$ is the set of all birds and the predicate is $F(x)$ is ``$x$ can fly'', then $\forall x F(x)$ is 
+``All birds can fly'' and $\neg \forall x F(x)$ is ``Not all birds can fly''. Which is logically equivalent to "There exists a bird 
+that cannot fly". This is the same as $\exists x \neg F(x)$
+\begin{itemize}
+    \item $\neg \forall x F(x) \equiv \exists x \neg F(x)$ In other words, ``Not all $x$ are $F(x)$'' is the same as ``There exists an $x$ that is not $F(x)$''
+    \item $\neg \exists x F(x) \equiv \forall x \neg F(x)$ In other words, ``There doesn't exist $x$ are $F(x)$'' is the same as ``All $x$ are not $F(x)$''
+\end{itemize}
+\subsection*{1.8.1: De Morgan's Law for universally Quantified Statements}
+\begin{itemize}
+    \item[] $\text{Domain} = {a_1, a_2, a_3, a_4}$
+    \item[] $\neg \forall x P(x) \equiv \exists x \neg P(x)$
+    \item[] \textbf{Thus:}
+    \item[] $\neg(P(a_1) \land P(a_2) \land P(a_3) \land P(a_4)) \equiv \neg P(a_1) \lor \neg P(a_2) \lor \neg P(a_3) \lor \neg P(a_4)$
+\end{itemize}
+\subsection*{1.8.2: De Morgan's Law for Existentially Quantified Statements}
+\begin{itemize}
+    \item[] $\text{Domain} = {a_1, a_2, a_3, a_4}$
+    \item[] $\neg \exists x P(x) \equiv \forall x \neg P(x)$
+    \item[] \textbf{Thus:}
+    \item[] $\neg(P(a_1) \lor P(a_2) \lor P(a_3) \lor P(a_4)) \equiv \neg P(a_1) \land \neg P(a_2) \land \neg P(a_3) \land \neg P(a_4)$
+    \item[] 
+    \item[] \textbf{Example:} Using a statement $P(x)$ set of children enrolled in class and $x$ is absent today.
+    \item[] $\neg \exists x P(x)$ is the same as ``There is no child absent today''
+    \item[] $\forall x \neg P(x)$ is the same as ``All children are not absent today''
+\end{itemize}
+
+
+\end{document}

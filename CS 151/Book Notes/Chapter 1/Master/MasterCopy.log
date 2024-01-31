@@ -1,0 +1,222 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.24)  26 JAN 2024 09:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex"
+(c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+ (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+)) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip50
+\cftbeforetoctitleskip=\skip51
+\cftaftertoctitleskip=\skip52
+\cftbeforepartskip=\skip53
+\cftpartnumwidth=\skip54
+\cftpartindent=\skip55
+\cftbeforesecskip=\skip56
+\cftsecindent=\skip57
+\cftsecnumwidth=\skip58
+\cftbeforesubsecskip=\skip59
+\cftsubsecindent=\skip60
+\cftsubsecnumwidth=\skip61
+\cftbeforesubsubsecskip=\skip62
+\cftsubsubsecindent=\skip63
+\cftsubsubsecnumwidth=\skip64
+\cftbeforeparaskip=\skip65
+\cftparaindent=\skip66
+\cftparanumwidth=\skip67
+\cftbeforesubparaskip=\skip68
+\cftsubparaindent=\skip69
+\cftsubparanumwidth=\skip70
+\cftbeforeloftitleskip=\skip71
+\cftafterloftitleskip=\skip72
+\cftbeforefigskip=\skip73
+\cftfigindent=\skip74
+\cftfignumwidth=\skip75
+\c@lofdepth=\count195
+\c@lotdepth=\count196
+\cftbeforelottitleskip=\skip76
+\cftafterlottitleskip=\skip77
+\cftbeforetabskip=\skip78
+\cfttabindent=\skip79
+\cfttabnumwidth=\skip80
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks17
+\pgfutil@tempdima=\dimen141
+\pgfutil@tempdimb=\dimen142
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box51
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+ (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks20
+))) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex
+\pgf@x=\dimen143
+\pgf@xa=\dimen144
+\pgf@xb=\dimen145
+\pgf@xc=\dimen146
+\pgf@y=\dimen147
+\pgf@ya=\dimen148
+\pgf@yb=\dimen149
+\pgf@yc=\dimen150
+\c@pgf@counta=\count197
+\c@pgf@countb=\count198
+\c@pgf@countc=\count199
+\c@pgf@countd=\count266
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen151
+\pgfmath@count=\count267
+\pgfmath@box=\box52
+\pgfmath@toks=\toks21
+\pgfmath@stack@operand=\toks22
+\pgfmath@stack@operation=\toks23
+) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count268
+))) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen152
+\pgffor@skip=\dimen153
+\pgffor@stack=\toks24
+\pgffor@toks=\toks25
+)) (C:\Users\keith\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box53
+)
+No file MasterCopy.aux.
+\openout1 = `MasterCopy.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+No file MasterCopy.toc.
+\tf@toc=\write3
+\openout3 = `MasterCopy.toc'.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> C:\NoteSchema 
+                         \CS 151\Book Notes\Chapter 1\De Morgan's law for qu...
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> C:\NoteSchema \CS 
+                             151\Book Notes\Chapter 1\De Morgan's law for qu...
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> C:\NoteSchema \CS 151\Book 
+                                      Notes\Chapter 1\De Morgan's law for qu...
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> ...teSchema \CS 151\Book Notes\Chapter 
+                                                  1\De Morgan's law for quan...
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> ...ema \CS 151\Book Notes\Chapter 1\De 
+                                                  Morgan's law for quantifie...
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Undefined control sequence.
+<argument> ...r quantified statements\ReadingNote 
+                                                  .tex
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: File `C:151Notes1Morgan's law for quantified statements.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9: Emergency stop.
+<read *> 
+         
+l.9 ... for quantified statements\ReadingNote.tex}
+                                                  ^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 6003 strings out of 474486
+ 124144 string characters out of 5743755
+ 1924528 words of memory out of 5000000
+ 28279 multiletter control sequences out of 15000+600000
+ 558674 words of font info for 38 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 53i,0n,52p,415b,114s stack positions out of 10000i,1000n,20000p,200000b,200000s
+c:/NoteSchema/CS 151/Book Notes/Chapter 1/Master/MasterCopy.tex:9:  ==> Fatal error occurred, no output PDF file produced!

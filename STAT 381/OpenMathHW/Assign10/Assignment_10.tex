@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{STAT 381 - Assingment 10} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{STAT 381 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section{Problem 1}
+\begin{itemize}
+    \item[] Find $c$ so that the following is a valid probability mass function: $f(x) = cx \text{for} x = 5, 6, 9, 10$
+    \item[] \textbf{Solution:}
+    \item[] Since this is a probability mass function, we know that $\sum_{x=5}^{10} f(x) = 1$
+\end{itemize}
+    \begin{align*}
+        \sum_{x=5}^{10} f(x) &= 1 \\
+        \sum_{x=5}^{10} cx &= 1 \\
+        c\sum_{x=5}^{10} x &= 1 \\
+        c(5 + 6 + 9 + 10) &= 1 \\
+        c(30) &= 1 \\
+        c &= \frac{1}{30} \\
+    \end{align*}
+
+
+
+\end{document}

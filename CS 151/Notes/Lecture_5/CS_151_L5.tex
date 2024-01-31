@@ -1,0 +1,144 @@
+\documentclass{article}
+\author{Keith Wesa} % Add your name as the author
+\title{CS 151 Lecture 5} % Change Lecture number here
+\date{\today} % Change date here
+% Packages for fancy header
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{Predicate Logic and Quantified Statements} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\begin{document}
+%\maketitle
+
+\section{Predicate Logic}{Notes on 1.6}
+\subsection{predicate logic}
+\begin{itemize}
+    \item[] \textbf{predicate} - a statement that contains a variable
+    \begin{itemize}
+        \item[] \textbf{predicate} - $P(x)$: This is a predicate with the variable $x$
+        \item[] \textbf{variable} - $x$: This is a variable in the predicate $P(x)$
+    \end{itemize}
+    \item[] \textbf{Quantified Statement} -is a logical expression that contains universal or existential quantifiers 
+    \begin{itemize}
+        \item[] \textbf{universal quantifier} - $\forall$: This is a universal quantifier
+        what this means is that the statement is true for all values of $x$
+        \item[] \textbf{existential quantifier} - $\exists$: This is an existential quantifier
+        what this means is that the statement is true for at least one value of $x$
+        \item[] \textbf{quantified statement} - $\forall x P(x)$: This is a quantified statement
+        what this means is that the statement is true for all values of $x$
+        \item[] \textbf{quantified statement} - $\exists x P(x)$: This is a quantified statement
+        what this means is that the statement is true for at least one value of $x$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Universal Quantifier}
+    \begin{itemize}
+        \item[]\textbf{What are universal quantifier?}
+        \begin{itemize}
+            \item[] A universal quantifier is a statement that is true for all values of $x$
+            \item[] $\forall x P(x)$: This is a universal quantifier
+            \item[] \textbf{example} - $\forall x (x > 0)$: This is a universal quantifier because 
+            it is true for all values of $x$ that are greater than 0.
+            \item[] The domain of $P(x)$ is all real numbers
+            \item[] \textbf{Therefore:}
+            \[
+                \forall xP(x) \equiv P(1) \land P(2) \land P(3) \land \dots
+            \]
+            \item[] \textbf{Counterexample} - A counterexample is a value of $x$ that makes the statement false and 
+            because the we are our domain consists of all real numbers, we can use any real number as a counterexample
+        \end{itemize}
+    \end{itemize}
+
+    \subsection{Existential Quantifier}
+    \begin{itemize}
+        \item[] \textbf{What are existential quantifiers?}
+        \begin{itemize}
+            \item[] An existential quantifier is a statement that is true for at least one value of $x$
+
+            \item[] $\exists x P(x)$: This is an existential quantifier
+            \item[] \textbf{example:}
+            \item[] $\exists x (x + 1 < 0)$: This is an existential quantifier because it is true for at least one value of $x$
+           \item[] \textbf{Therefore:}
+            \[
+                \exists x(x + 1 < 0) \equiv (0 + 1 < 0) \lor (1 + 1 < 0) \lor (2 + 1 < 0) \lor \dots
+            \]
+            \item[] \textbf{Counterexample} - A counterexample is a value of $x$ that makes the statement false.
+            \item[] \textbf{example:} 
+            \[
+                \exists x(x + 1 \geq 0) {\forall x \in \mathbb{R}}    
+            \]
+            \item[] As you can see, this statement is false because this is true for all values of $x$.    
+        \end{itemize}  
+    \end{itemize}
+    \section{Quantified Statements}{Notes on 1.7}
+    \subsection{Quantifiers and Negations}
+    \begin{itemize}
+        \item[] \textbf{Quantified Statements} - A quantified statement is a statement that contains a quantifier
+        such as $\forall$ or $\exists$
+        \item[] \textbf{example:}
+            P(x): x is a prime number and O(x): x is an odd number
+        \[
+            \exists x(P(x) \land \lnot O(x)) 
+        \]
+        This statement is true because there exists a prime number that is not odd, which is 2.
+        \[            
+            \forall x(P(x) \rightarrow O(x))
+        \]
+        This statement is false because there exists a prime number that is not odd, which is 2.
+        \item[] \textbf{Free Variables} - A free variable is a variable that is not bound by a quantifier
+        \[
+            \forall x(P(x) \rightarrow O(x))
+        \]
+        In this statement, $x$ is a free variable because it is not bound by a quantifier. It is called a free variable
+        because it is free to take on any value.
+
+        \item[] \textbf{Bound Variables} - A bound variable is a variable that is bound by a quantifier. It is called a
+        bounded variable because it is bound to the quantifier and can only take on values that are in the domain of the
+        quantifier.
+
+        \item[] \textbf{What makes something a proposition?}
+            \begin{itemize}
+                
+                \item[] A proposition is a statement that is either true or false
+                \item[] \textbf{example:}
+                \item[] $x + 1 = 2$ is a proposition because it is either true or false
+                \item[] $x + 1 = 2$ is false because $x$ can be any value
+                \item[] $x + 1 = 2$ is true because $x$ can only be 1
+            \end{itemize}
+        \item[] \textbf{What makes something a predicate?}
+            \begin{itemize}
+                \item[] A predicate is a statement that contains a variable
+                \item[] \textbf{example:}
+                \item[] $\forall x(x + 1 = 2)$ is a predicate because it contains a variable
+            \end{itemize}
+        \item[] \textbf{Negation of a Quantified Statement}
+            \begin{itemize}
+                \item[] \textbf{Define:} Negation: $\lnot$
+
+            \end{itemize}
+            \begin{itemize}
+                \item[] \textbf{example:}
+                \item[] $\forall x(x + 1 = 2)$ is a predicate because it contains a variable
+                \item[] $\lnot \forall x(x + 1 = 2)$ is the negation of the predicate $\forall x(x + 1 = 2)$
+                \item[] $\lnot \forall x(x + 1 = 2)$ is equivalent to $\exists x(x + 1 \neq 2)$
+                \item[] $\exists x(x + 1 \neq 2)$ is the negation of the predicate $\forall x(x + 1 = 2)$
+            \end{itemize}
+            \begin{itemize}
+                \item[] \textbf{example:}
+            \end{itemize}
+            \begin{equation}
+                \lnot \exists x(P(x) \land \lnot O(x)) \equiv 
+                 \forall x \lnot P(x) \lor O(x) \equiv 
+                  \forall x(P(x) \rightarrow O(x)
+            \end{equation}
+    \end{itemize}
+
+\end{document}
+

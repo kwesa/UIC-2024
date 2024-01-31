@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+\usepackage{mathbbol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathbbol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\title{Assignment 1}
+\author{Keith Wesa}
+\date{\today}
+
+\maketitle
+
+\section{Question 1}
+
+The most common first experience students have with “proofs” is by proving
+trigonometric identities. It is important to understand that when we prove trigonometric identities, we are not just pushing around symbols until both sides are equal.
+We need to be wary of when our equality makes sense.
+
+
+\begin{itemize}
+    \item[a.] Use trigonometric identities to prove that:
+
+    \begin{align}
+        
+        $\sec(x) - \tan(x)\sin(x) = \cos(x)$
+
+        $\frac{1}{\cos(x)} - \frac{\sin(x)}{\cos(x)}\sin(x) = \cos(x)$
+
+        $\frac{1}{\cos(x)} - \frac{\sin^2(x)}{\cos(x)} = \cos(x)$
+
+        $\frac{1 - \sin^2(x)}{\cos(x)} = \cos(x)$
+
+        $\frac{\cos^2(x)}{\cos(x)} = \cos(x)$
+
+        $\cos(x) = \cos(x)$ 
+
+    \end{align}
+
+\end{itemize}
+\begin{itemize}
+    \item[b.] For what values of x is the left-hand side defined? For what values of x is
+    the right-hand side defined? (i.e. What are the domains?)
+
+    
+    
+    The left-hand side is defined for all values of x except for $\frac{\pi}{2} + n\pi$ where n is an integer.
+    We know this because $\sec(x)$ is undefined for $\frac{\pi}{2} + n\pi$ where n is an integer. This is because 
+    the quotient identity for $\sec(x) = \frac{1}{\cos(x)}$ and $\cos(\frac{\pi}{2} + n\pi) = 0$. However, due to the
+    properties of functions, and the fact it is not simplified, when you simplify it resolves to $\cos(x)$ which is defined for all values of x.
+
+
+    The right-hand side is defined for all values of x.
+
+    \item[c.] Write a statement which clearly indicated when the trigonometric identity is
+    true.
+
+\begin{center}
+    $\sec(x) - \tan(x)\sin(x) = \cos(x)$   
+\end{center}
+is true for all real numbers. $ x \in \mathbb{R}$
+\end{itemize}
+
+
+\section{Question 2}
+
+In lecture, we proved that $\sqrt{2}$ is an irrational number. In our proof, we appealed
+to several facts that we probably believe are true (whether we were told that they
+are true, or because we have seen a sufficient plethora of examples to convince
+ourselves). Whenever possible, we want to know why the facts that we are using
+are true (although even for a veteran mathematician, it is impossible to know why
+all facts are true).
+
+\begin{itemize}
+ \item[2.] If $p^2$ is even, then $p$ is even.
+\end{itemize}
+\begin{itemize}
+    \item [a.] What does it mean for a number to be even? What does it mean for a number
+    to be odd?
+
+        \begin{proof}
+            A number is even if it is divisible by 2.
+            A number is odd if it is not divisible by 2.
+        \end{proof}
+            
+    \item [b.]  Consider the numbers 16, 36, 64, 100. What are their square roots? Are
+    they even?
+
+        \begin{proof}
+            The square roots of 16, 36, 64, 100 are 4, 6, 8, 10 respectively. They are all even.
+        \end{proof}
+
+    \item [c.] What is a general expression to represent even numbers? What is a general
+    expression to represent odd numbers?
+
+        % Rest of the document...
+
+        \begin{proof}
+            A general expression to represent even numbers is $2n$ where $n \in \mathbb{Z}$.
+            A general expression to represent odd numbers is $2n + 1$ where $n \in \mathbb{Z}$.
+        \end{proof}
+
+    \item [d.] Suppose that $p$ is an odd number. Find an expression for $p^2$. Is $p^2$ even or odd?
+            
+            \begin{align}
+                $p^2 = (2p + 1)^2$ where $n \in \mathbb{Z}$.
+
+                $p^2 = 4p^2 + 4p + 1$ where $n \in \mathbb{Z}$.
+
+                $p^2 = 4(p^2 + p) + 1$ where $n \in \mathbb{Z}$.
+                
+                If you put any value of $n$ into the equation, it will always be odd.
+            \end{align}
+    \item [e.] What can you conclude about the theorem based on your answer to part (d)?
+                
+        I can conclude that the theorem that if $p^2$ is even, then $p$ is even is true.
+
+    \item [f.] using similar logic and Theorem 1, prove that the following related fact:
+    
+    \subitem if $p^4$ is even, then $p$ is even. (Hint: $p^4 = (p^2)^2$)
+    \begin{align}
+
+        even:
+
+
+        $p^4 = (p^2)^2$
+
+        $p^4 = (2p^2)^2$ where $n \in \mathbb{Z}$.
+
+        $p^4 = 4p^4 $ where $n \in \mathbb{Z}$.
+
+        so $p^4$ is even.
+
+        odd:
+
+        $p^4 = [4(p^2 + p) + 1]^2$ where $n \in \mathbb{Z}$.
+
+        $p^4 = 16(p^2 + p)^2 + 8(p^2 + p) + 1$ where $n \in \mathbb{Z}$.
+
+        What is in the parenthesis is always even, so if we add 1 to it, it will always be odd.
+
+    
+    \end{align}
+
+\end{itemize}
+
+
+% attach image here!
+
+\section{Question 3}
+
+Once a fact has been proven, a natural next step is to look for generalizations of
+that fact. It is sometimes possible to reuse the proof method (with some small
+changes) to prove one of the generalizations. In some extreme cases, a similar proof
+method can be used to prove seemly unrelated facts.
+
+\begin{itemize}
+    \item [a.] Prove that $\sqrt[4]{2}$ is irrational.
+
+    \begin{proof}
+        \begin{align}
+        Given: 
+
+        The Irrationality of the $\sqrt{2}$ is found by:
+
+        $\sqrt{2} = \frac{p}{q}$ with no common factors and $q \neq 0$  $k=common factor$
+        
+        $p^2 = 2q^2$
+
+        $p^2$ is an even number 
+
+        If $p^2$ is even then $p$ is also even 
+
+
+        $2q^2 = p^2 = (2k)^2 = 4k^2$
+
+        $q^2 = 2k^2$
+
+        In context of the $\sqrt[4]{2}$ we can take it above.
+
+        $2q^4 = p^4 = (2k)^4 = 16k^4$
+
+        Given that $q^2$ is even, and $q$ is even. Both would contradict each other because there would be an even common factor. 
+        This is a proof by contradiction.
+        
+        \end{align}
+    
+    \end{proof}
+
+\end{itemize}
+
+
+\end{document}

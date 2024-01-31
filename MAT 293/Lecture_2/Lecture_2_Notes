@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT 296 - Lecture 2} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{STAT 381 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section{Quantifiers}
+
+
+
+
+
+\end{document}

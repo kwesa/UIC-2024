@@ -1,0 +1,89 @@
+\documentclass{article}
+
+% Packages
+\usepackage{amsmath} % For mathematical symbols and equations
+\usepackage{amsthm} % For theorem environments
+\usepackage{enumitem} % For customizing lists
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+% Custom commands
+\newcommand{\proofcommand}{\noindent\textbf{Proof.}\hspace{0.5em}}
+% \newcommand{\qed}{\hfill$\square$}
+
+% Document information
+\title{Notes for Proofs Class: Proving that $\sqrt2$  is irrational}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Learining Objectives}
+    \begin{itemize}
+        \item describe the proof of several elementary facts.
+        \item apply similar proof methods to similar elementry facts.
+    \end{itemize}
+
+    Before we delve into the finer details of logic and proofs, it will be beneficial to see some 
+    examples of pfoofs to help motivate the ideas we are learning. While one might think that Proofs
+    all have to do with high-level abstract math, there are actually many elementrory facts that have 
+    interesting and inspired proofs. 
+
+\section{Introduction}
+
+     The Pythagoreans discovered that the diagonal of a square with side length 1 has length $\sqrt2$.
+     They also discovered that $\sqrt2$ is not a rational number.
+     This was a shock to them, because they believed that all numbers were rational.
+     This discovery led to the discovery of irrational numbers.
+     In plaine words, an irrational number is a number that cannot be expressed as a fraction of two integers.
+    
+
+% Your notes go here
+
+\section{Theorems}
+
+\begin{theorem}
+    Suppose toward a contradiction that $\sqrt2$ is rational. This means that $\sqrt2 = \frac{p}{q}$
+    for some integers $p$ and $q$ with no common factors. Then $2 = \frac{p^2}{q^2}$, so $2q^2 = p^2$.
+    This means that $p^2$ is even, so $p$ is even. So $p = 2k$ for some integer $k$. Then $2q^2 = (2k)^2 = 4k^2$,
+    so $q^2 = 2k^2$. This means that $q^2$ is even, so $q$ is even. But this means that $p$ and $q$ have a common
+    factor of 2, which contradicts our assumption. Therefore, $\sqrt2$ is irrational.
+     
+    A number $\alpha$ is rational if $\alpha = \frac{p}{q}$ for some integers $p$ and $q$ i.e (0,$\pm1$,$\pm2$,$\pm3$,...),
+    with $q \neq 0$.
+
+    A number $\alpha$ is irrational if $\alpha$ is not rational, i.e., $\alpha \neq \frac{p}{q}$ for any integers $p$ and $q$.
+
+    In other words. The theorem states that $\sqrt{2}$ cannot be expressed as a fraction of two integers.
+
+\end{theorem}
+
+  \begin{proof}
+    Suppose toward a contradiction that $\sqrt2$ is rational. This means that $\sqrt2 = \frac{p}{q}$
+    for some integers $p$ and $q$ with no common factors. Then $2 = \frac{p^2}{q^2}$, so $2q^2 = p^2$.
+    This means that $p^2$ is even, so $p$ is even. So $p = 2k$ for some integer $k$. Then $2q^2 = (2k)^2 = 4k^2$,
+    so $q^2 = 2k^2$. This means that $q^2$ is even, so $q$ is even. But this means that $p$ and $q$ have a common
+    factor of 2, which contradicts our assumption. Therefore, $\sqrt2$ is irrational.
+\end{proof}
+
+    This proof is an example of "proof by contradiction", where we assume the conclusion i.e. ($\sqrt{2}$ is irrational) is false,
+    and aim to find an impossilbe consequence  i.e ($\frac{p}{q}$ is both in loweest terms and not in the lowest terms).
+
+
+
+\section{Definitions}
+
+\begin{definition}
+    % Definition
+\end{definition}
+
+% More definitions
+
+\end{document}

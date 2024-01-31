@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{soul}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 1.9 Notes:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{1.9 Nested Quantifiers}
+\subsection*{Nested Quantifiers}
+If a predicate has more that one variable, each variable must be bound by a separate quantifier. For example, the statement
+A logical expression with more that one quantifier that binds different variables in the same predicate is said to have \textfb{nested quantifiers}.
+\begin{itemize}
+    \item[] \textbf{Examples:}
+    \item[] 
+    \item[] $\forall x \exists y P(x,y)$ is read as ``For all $x$, there exists a $y$ such that $P(x,y)$'' $x$ is bound by the universal quantifier and $y$ is bound by the existential quantifier.
+    \item[] $\forall x P(x,y)$ is read as ``For all $x$, $P(x,y)$'' $x$ is bound by the universal quantifier and $y$ is free.
+    \item[] $\exists y \exists z T(x,y,z)$ is read as ``There exists a $y$ and there exists a $z$ such that $T(x,y,z)$'' $x$ is free, $y$ is bound by the first existential quantifier, and $z$ is bound by the second existential quantifier.
+    \end{itemize}
+   
+\subsection*{1.9.1: Nested Quantifiers of the Same Type}
+Consider a scenario where the domain is a group of people who are all working on a joint project. Let $M(x,y)$ be the predicate
+``$x$ has sent an e-mail message to $y$''. 
+\begin{itemize}
+    \item $\text{Domain} = \{ \text{all people working on the project} \}$
+    \item $\forall x \forall y M(x,y)$ reads as ``For all $x$ and for all $y$, $x$ has sent an e-mail message to $y$''OR ``Everyone has sent an e-mail message to everyone''
+    \item The statement $\forall x \forall y M(x,y)$ is true if every pair, $x$ and $y$, $M(x,y)$ is true. The universal quantifier include the case that $x = y$, so if $\forall x \forall y M(x,y)$ is true, then everyone has sent an e-mail
+    to everyone else and everyone sent an email to themselves.
+    \item The statement $\forall x \exists y M(x,y)$ is false if there is at least one person who has not sent an e-mail message to anyone. If even a single individual has not sent an e-mail message to anyone, then $\forall x \exists y M(x,y)$ is false.
+    \item Now lets consider the statement $\exists x \exists y M(x,y)$
+    \item That can be read as ``There is a person who has sent an e-mail to someone'' or ``Someone has sent an e-mail to someone''
+    \item The statement $\exists x \exists y M(x,y)$ is true if there is a pair $x$ and $y$  in the domain that causes $M(x,y)$ to be true. In particular, $\exists x \exists y M(x,y)$ is true even in the situation that there is a single individual who
+    has sent an e-mail to themselves. The statement is false if no one has sent an e-mail to anyone.    
+
+\end{itemize}
+\subsection*{1.9.2: Nested Quantifiers of Different Types}
+\begin{table}[!htb]
+    \caption{1.9.2: Nested Quantifiers as a two-person game}
+    \begin{minipage}{1.0\linewidth}
+      \label{tab:table_label}
+      \begin{center}
+        \begin{tabular}{ l | l | l }
+            \textbf{Player} & \textbf{Action} & \textbf{Goal} \\ \hline
+           $\exists$ Existential player  & selects values for existential bound variables & Tries to make the expression true \\
+           $\forall$ Universal player & selects values for universal bound variables & Tries to make the expression false \\      
+        \end{tabular}
+    \end{center}
+    \end{minipage}%
+\end{table}
+\end{document}

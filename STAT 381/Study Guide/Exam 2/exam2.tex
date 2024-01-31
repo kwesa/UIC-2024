@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{Stat 381 Review Exam 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{\textbf{Review:}}
+\begin{enumerate}
+    \item review the definitions of permutations / combinations and be able to identify them.
+    be able to calculate probabilities with permutations / combinations.
+    \begin{itemize}
+        \item Permutations: $P(n,r) = \frac{n!}{(n-r)!}$
+        \item If the problem says "order matters" then it is a permutation problem.
+        \item Combinations: $C(n,r) = \frac{n!}{r!(n-r)!}$ 
+        \item If the problem says "order doesn't matter" then it is a combination problem.
+    \end{itemize}
+    \item Know the addition rule.
+    \begin{itemize}
+        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+        \item If the problem is asking for the probability of A or B happening then it is an addition rule problem.
+    \end{itemize}
+    \item Know about intersection probabilities (AND) and conditional probabilities (GIVEN) and Homework
+    they differ conceptually.
+    \begin{itemize}
+        \item Intersection probabilities are the probability of two events happening at the same time.
+        \item $P(A \cap B) = P(A)P(B)$
+        \item Conditional probabilities are the probability of an event happening given that another event has already happened.
+        \item $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+    \end{itemize}
+   \item How the difference between mutually exclusive and independent. Be able to calculate both of these options.
+    \begin{itemize}
+         \item Mutually exclusive events are events that cannot happen at the same time.
+         \item $P(A \cap B) = 0$
+         \item Independent events are events that do not affect each other.
+         \item $P(A|B) = P(A)$
+    \end{itemize}
+    \item Be able to calculate probabilities when you don't have things that are mutually exclusive or independent 
+    when having trouble draw a picture. 
+    \item Know how to use the compliment rule when trying to calculate greater than or equal to probabilities.
+    \begin{itemize}
+        \item $P(A^c) = 1 - P(A)$
+    \end{itemize}
+    \item Be able to calculate probabilities using Bayes' Rule Tree Diagrams nd how to draw them. 
+    \begin{itemize}
+        \item $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+        \item Bayes' Rule is used when you are given the probability of B given A and you need to find the probability of A given B.
+        \item Tree diagrams are used to help visualize the problem.
+        \item The first branch is the probability of A happening.
+        \item The second branch is the probability of B happening given that A has already happened.
+        \item The third branch is the probability of B happening given that A has not happened.
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document}

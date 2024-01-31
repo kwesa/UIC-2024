@@ -1,0 +1,4 @@
+PWD c:\NoteSchema\Math 215\Lecture_5
+INPUT C:\Users\keith\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\NoteSchema\Math 215\Lecture_5\notes.tex
+OUTPUT notes.log

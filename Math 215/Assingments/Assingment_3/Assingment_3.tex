@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT Written Assingment 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1}
+\textbf{For each set $S$ given below, describe the set using other two notations: 
+sentence notation, roster notation, or set-builder notation.} (Hint: to find a suitable sentence
+for b. and c, think about what the set is describing. The set-builder form for a and b is not unique.)
+(Note: When describing the set in roster notation, you need to provide enough elements to make 
+the set in roster notation, you need to provide enough elements to make the set clear.) \textbf{[6 Marks]}
+\begin{itemize}
+    \item[a.] The set $S$ of integers divisible by 3 and 5.
+    \begin{itemize}
+        \item[] \textbf{Roster Notation: } $S = \{15, 30, 45, 60, 75, 90\}$
+        \item[] \textbf{Set-Builder Notation: } $S = \{n \in \mathbb{Z} : n = 3k \land n = 5p\}$
+        \begin{proof}
+        \begin{center} 
+        \begin{tabular}{|c|c|c|c|} 
+        \hline $k$ & $p$ & $3k$ & $5p$ \\ 
+        \hline 
+        1 & 1 & 1 & 1 \\
+        1 & 0 & 0 & 0  \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 0  \\
+\hline 
+\end{tabular} 
+\end{center}
+        \item[] In order to satisfy the condition for $S$, $n$ must be a multiple of both 3 and 5. The statement would be false any other way.
+        \end{proof}
+
+    \item[b.] $S =\{1,2,3,4,6,12\}$
+    \item[] \textbf{Sentence Notation: } The set of all positive integers that are factors of 12.
+    \item[] \textbf{Set-Builder Notation: } 
+    \begin{align*}
+        S &=\{1,2,3,4,6,12\} \\
+        P &= \{12, 6, 4, 3, 2, 1\}\\ 
+        S &= \{\forall n \in S(n) \forall p \in P(p) : n = \frac{12}{p} \} \\
+    \end{align*}
+    \begin{itemize}
+        \item I thought this was an interesting question, and I couldn't figure out how to properly write out an answer for it
+        what I find interesting is as the number $n$ increases then number for $p$ decreases. I'm not sure how to properly write this out in set-builder notation.
+        So, I just started throwing math at it. 
+    \end{itemize}
+    \item[]
+    \item[c.] $S = \{4^k : k \in \mathbb{Z}\}$
+    \item[] \textbf{Sentence Notation: } The set of integers that raise 4 to the power of $k$.
+    \item[] \textbf{Set-Builder Notation: } $S = \{1, 4, 16, 64, 256\}$
+\end{itemize} 
+\end{itemize} 
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT Written Assingment 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+
+\section*{Logical Reasoning}
+\subsection*{Reasoning}
+\begin{itemize}
+    \item[] let $p$ be the statement "room 1 contains a car"
+    \item[] let $q$ be the statement "room 2 contains a goat"
+    \begin{align*}
+        \not(p \lor q) \\
+        & p \text{Hypothesis} \\
+        &\equiv \neg p \land \neg q \\
+    \end{align*}
+    \item[]
+    \item[] \textbf{Example 2:} Show that the following argument is valid using the rules of inference.
+    \begin{align*}
+        &\exists x(P(x) \land \lnot R(x)) \\
+        & \forall x(P(x) \to S(x)) \\
+        & \forall x(\lnot S(x) \to R(x)) \\
+        & \exists x(\lnot R(x) \land S(x)) \\
+    \end{align*}
+
+\end{itemize}
+\end{document}

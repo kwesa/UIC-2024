@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT 215 Lecture 9 Notes:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{STAT 381 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Lecture 9: Nested Quantifiers}
+\subsection*{Learning Objectives}
+\begin{itemize}
+    \item interpret nested Quantifiers
+    \item negating nested statements 
+\end{itemize}
+\subsection*{Nested Quantifiers}
+\begin{itemize}
+    \item[Q:] What is the difference between
+    \item[(i)] $\forall s \in \mathbb{R} \exists t \in \mathbb{R} \text{ such that } t > s$
+    \item This is true because we can always pick a number like $t = s + 1$ that is greater than $s$.
+    \item[(ii)] $\exists t \in \mathbb{R} \text{ such that } \forall s \in \mathbb{R} \text{ such that } t > s$
+    \item This is false because we cannot pick a number $t$ that is greater than all real numbers $s$.
+    \item[] \textbf{Answer:} (i) is true and (ii) is false
+    \item[] \textbf{Example:}
+    \item[] $\forall x \in \mathbb{R} \forall x \in X, \exists y \in Y \text{ such that } \not \equiv \exists y \in Y \text{ such that } \forall x \in X, P(x,y)$ 
+    \item[] $\forall x \in \mathbb{R} \forall x \in X, \forall y \in Y \text{ such that } \equiv \forall y \in Y \text{ such that } \forall x \in X, P(x,y)$
+    \item[] \textbf{Example 2:}
+    \item[] Taking the problem and breaking it into shorter single quantified statements.
+    \item[] $\forall x \in X[\exists y in Y \text{ such that } [\forall z \in Z \text{ such that } P(x,y,z)]]$
+    \item Break into smaller statements
+    \item[(i)] $\forall x \in X$
+    \item[(ii)] $\exists y \in Y$
+    \item[(iii)] $\forall z \in Z$
+\end{itemize}
+\newpage
+\begin{itemize}
+    \item[] \textbf{Example 3: Epsilon Delta Definition of a Limit}
+    \item[] $\forall \epsilon > 0 \exists \delta > 0 \text{ s.t } \forall x \in \mathbb{R} \text{ s.t } 0 < |x - c| < \delta \text{ we have } |f(x) - L| < \epsilon$
+    \item[(i)] Pick an arbitrary $\epsilon > 0$
+    \item[(ii)] Pick a $\delta > 0$ that depends on $\epsilon$
+    \item[(iii)] Pick an arbitrary $x \in \mathbb{R}$ that satisfies $0 < |x - c| < \delta$
+    \item[(iv)] Check that $|f(x) - L| < \epsilon$ is true or not  
+   
+
+
+    \section*{Epsilon-Delta Proof}
+    Let $f(x)$ be a function defined on $\mathbb{R}$ and $L$ be the limit of $f(x)$ as $x$ approaches $c$. We want to prove that:
+    \[
+    \forall \epsilon > 0, \exists \delta > 0 \text{ such that } \forall x \in \mathbb{R}, 0 < |x - c| < \delta \implies |f(x) - L| < \epsilon
+    \]
+
+    \begin{tikzpicture}
+        \draw[->] (-2,0) -- (6,0) node[right] {$x$};
+        \draw[->] (0,-2) -- (0,6) node[above] {$f(x)$};
+        \draw[dashed] (2,0) -- (2,4) node[above] {$L$};
+        \draw[thick, domain=-1:5, smooth, variable=\x] plot ({\x},{0.5*(\x-2)^2+2});
+        
+        \draw[red, dashed] (3,0) -- (3,3.25) node[above] {$f(x)$};
+        \draw[red, dashed] (3.5,0) -- (3.5,3.875) node[above] {$f(x)$};
+        
+        \draw[<->] (2,-0.5) -- (3,-0.5) node[midway, below] {$\delta$};
+        \draw[<->] (3,-0.5) -- (3.5,-0.5) node[midway, below] {$\delta$};
+        
+        \draw[<->] (2,4.5) -- (3,4.5) node[midway, above] {$\epsilon$};
+        \draw[<->] (3,4.5) -- (3.5,4.5) node[midway, above] {$\epsilon$};
+    \end{tikzpicture}
+
+\end{itemize}
+
+
+
+
+
+\end{document}

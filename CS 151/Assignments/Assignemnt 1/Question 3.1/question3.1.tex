@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT Written Assingment 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+
+\section*{Question 1}
+
+\subsection*{\textbf{Question 1.1}}
+Use the laws of propositional logic to prove that the following compound propositions are logically equivalent. You must indicate the name of the law used in each step of the proof.
+
+\begin{itemize}
+    \item[] Show that $(p \land q) \rightarrow r$ and $p \rightarrow \lnot (q \rightarrow r)$ are logically equivalent.
+    \begin{align*}
+        (p \land q) \rightarrow r &\equiv \neg(p \land q) \lor r & \text{Definition of implication}\\
+        &\equiv (\neg p \lor \neg q) \lor r & \text{De Morgan's Law}\\
+        &\equiv \neg p \lor (\neg q \lor r) & \text{Associative Law}\\
+        &\equiv \neg p \lor \neg(q \rightarrow r) & \text{Definition of implication}\\
+        &\equiv p \rightarrow \neg (q \rightarrow r) & \text{Definition of implication} \\
+    \end{align*}
+    \item[] Show that $(p \rightarrow r) \lor (q \rightarrow r)$ and $(p \land 1) \rightarr r$ are logically equivalent.
+    \begin{align*}
+        (p \rightarrow r) \lor (q \rightarrow r) &\equiv (\neg p \lor r) \lor (\neg q \lor r) & \text{Definition of implication}\\
+        &\equiv (\neg p \lor \neg q) \lor r & \text{Associative Law}\\
+        &\equiv \neg(p \land q) \lor r & \text{De Morgan's Law}\\
+        &\equiv (p \land q) \rightarrow r & \text{Definition of implication}\\
+        &\equiv (p \land 1) \rightarrow r & \text{Identity Law}
+    \end{align*}
+    \item[] Show that $p \leftrightarrow q$ and $(\lnot p \land \lnot q) \lor (p \land q)$ are logically equivalent.
+    \begin{align*}
+        p \leftrightarrow q &\equiv (p \rightarrow q) \land (q \rightarrow p) & \text{Definition of biconditional}\\
+        &\equiv (\neg p \lor q) \land (\neg q \lor p) & \text{Definition of implication}\\
+        &\equiv (\neg p \land \neg q) \lor (\neg p \land p) \lor (q \land \neg q) \lor (q \land p) & \text{Distributive Law}\\
+        &\equiv (\neg p \land \neg q) \lor (q \land p) & \text{Identity Law}\\
+        &\equiv (\lnot p \land \lnot q) \lor (p \land q) & \text{Definition of negation}
+    \end{align*}
+    \item[] Show that $(p \land q) \leftrightarrow q$ and $p \rightarrow q$ are logically equivalent.
+    \begin{align*}
+        (p \land q) \leftrightarrow q &\equiv (p \land q) \rightarrow q \land q \rightarrow (p \land q) & \text{Definition of biconditional}\\
+        &\equiv (\neg p \lor \neg q) \lor q \land \neg q \lor (\neg p \lor \neg q) \lor p \land q & \text{Definition of implication}\\
+        &\equiv (\neg p \lor \neg q) \lor p \land q & \text{Identity Law}\\
+        &\equiv \neg p \lor (\neg q \lor p) \land (\neg q \lor q) & \text{Distributive Law}\\
+        &\equiv \neg p \lor (\neg q \lor p) \land 1 & \text{Negation Law}\\
+        &\equiv \neg p \lor (\neg q \lor p) & \text{Identity Law}\\
+        &\equiv \neg p \lor p \lor \neg q & \text{Associative Law}\\
+        &\equiv 1 \lor \neg q & \text{Negation Law}\\
+        &\equiv \neg q \lor 1 & \text{Commutative Law}\\
+        &\equiv 1 & \text{Identity Law}\\
+        &\equiv p \rightarrow q & \text{Definition of implication}
+    \end{align*}
+
+\end{itemize}
+\newpage
+\subsection{\textbf{Question 1.2}}
+Use the laws of propositional logic to prove that the following compound propositions are tautologies. You must indicate the name of the law used in each step of the proof.
+
+\begin{itemize}
+    \item[] Show that $(p \land q) \rightarrow (p \rightarrow q)$ is a tautology.
+    \begin{proof}
+        \begin{align*}
+            (p \land q) \rightarrow (p \rightarrow q) &\equiv \neg(p \land q) \lor (p \rightarrow q) & \text{Definition of implication}\\
+            &\equiv (\neg p \lor \neg q) \lor (\neg p \lor q) & \text{Definition of implication}\\
+            &\equiv \neg p \lor (\neg q \lor \neg p) \lor q & \text{Associative Law}\\
+            &\equiv \neg p \lor \neg p \lor (\neg q \lor q) & \text{Associative Law}\\
+            &\equiv \neg p \lor \neg p \lor 1 & \text{Negation Law}\\
+            &\equiv \neg p \lor 1 & \text{Idempotent Law}\\
+            &\equiv 1 & \text{Negation Law}
+        \end{align*}
+    \end{proof}
+    \item[] Show that $((p \rightarrow q) \land (\lnot p \rightarrow r)) \rightarrow (\lnot r \rightarrow q)$ is a tautology.
+    \begin{proof}
+        \begin{align*}
+            ((p \rightarrow q) \land (\lnot p \rightarrow r)) \rightarrow (\lnot r \rightarrow q) &\equiv \neg((p \rightarrow q) \land (\lnot p \rightarrow r)) \lor (\lnot r \rightarrow q) & \text{Definition of implication}\\
+            &\equiv \neg((\neg p \lor q) \land (p \lor r)) \lor (\neg r \lor q) & \text{Definition of implication}\\
+            &\equiv (\neg(\neg p \lor q) \lor \neg(p \lor r)) \lor (\neg r \lor q) & \text{De Morgan's Law}\\
+            &\equiv ((p \land \neg q) \lor (\neg p \land \neg r)) \lor (\neg r \lor q) & \text{De Morgan's Law}\\
+            &\equiv ((p \land \neg q) \lor (\neg p \land \neg r)) \lor (q \lor \neg r) & \text{Commutative Law}\\
+            &\equiv (p \land \neg q) \lor (\neg p \land \neg r) \lor q \lor \neg r & \text{Associative Law}\\
+            &\equiv (p \lor q) \land (\neg q \lor \neg r) \lor q \lor \neg r & \text{Distributive Law}\\
+            \end{align*}
+        \end{proof}
+
+
+\end{itemize}
+\end{document}

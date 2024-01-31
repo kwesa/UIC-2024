@@ -1,0 +1,63 @@
+\documentclass{article}
+
+% Packages
+\usepackage{amsmath} % For mathematical symbols and equations
+\usepackage{amsthm} % For theorem environments
+\usepackage{enumitem} % For customizing lists
+
+% Theorem Environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+% Custom Commands
+% Remove the conflicting \newcommand{\proof} line
+% \newcommand{\qed}{\hfill$\square$}
+
+% Document
+\begin{document}
+
+\title{Notes on Chapter 1 of \textit{Proof and the Art of Mathematics}}
+\author{Keith Wesa}
+\date{\today}
+\maketitle
+
+\section{Chapter 1: Introduction}
+    \subsection{Definitions}
+    \begin{itemize}
+        \item \textbf{Mathematical Proof} is a convincing argument 
+        (within the context of mathematics) that a mathematical statement is true.
+        \item \textbf{Theorem} is a mathematical statement that has been proved.
+        \item \textbf{Lemma} is a theorem that is used as a stepping stone to prove other theorems.
+        \item \textbf{Corollary} is a theorem that follows directly from another theorem.
+        \item \textbf{Definition} is a statement that gives the precise meaning of a mathematical term.
+        \item \textbf{Example} is a mathematical statement that illustrates a theorem or definition.
+        \item \textbf{Incommensurable} is a term used to describe two lengths that do not have a common unit of measure.
+        \item \textbf{Contradiction} is a statement that is false.
+    \end{itemize}
+\subsection{The Pythagorean's}
+    \begin{itemize}
+        \item Pythagorean's believed that all numbers could be expressed as a ratio of integers.
+        \begin{itemize}
+            \item This is not true, as $\sqrt{2}$ is irrational.
+            \item This is not true, as $\pi$ is irrational.
+            \item The Pythagoreans discovered in the fifth century B.C that the side and diagonal
+            of a square are not commensurable. By that I mean that the square has o common unit of measure.
+            \item If you divide the side of the square into ten equal units, then the diagonal will be little more than 
+            fourteen of those units. If you were to divide it into 1,000 units, then it would be little more than 1,414 units.
+            \item $\sqrt{2} = 1.41421...$ which is irrational.     
+    \end{itemize}
+\begin{theorem}
+    Statement of the theorem goes here.
+\end{theorem}
+
+\begin{proof}
+    Proof of the theorem goes here.
+\end{proof}
+
+% Add more sections, theorems, lemmas, examples, etc. as needed
+
+\end{document}

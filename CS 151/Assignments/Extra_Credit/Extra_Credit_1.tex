@@ -1,0 +1,46 @@
+\input{C:/NoteSchema/Templates/HomeworkTemp_151.tex}
+
+\begin{document}
+
+\title{Extra Credit Assignment}
+\author{Keith Wesa}
+\date{\today}
+
+
+
+\section*{Extra Credit Problem}
+\begin{homeworkProblem}{Extra Credit Problem}
+Prove the following logical equivalence:
+
+\[
+\lnot p \rightarrow (q \rightarrow r) \equiv q \rightarrow (p \lor r) 
+\]
+    Start with the Left Side:
+\begin{enumerate}
+\item[] $\lnot p \rightarrow (q \rightarrow r)$
+\item[] $\lnot\lnot p \lor (q \rightarrow r)$  \hspace{1cm} Conditional Identity
+\item[] $p \lor (q \rightarrow r)$  \hspace{1cm}  Double Negation
+\item[] $p \lor (\lnot q \lor r)$  \hspace{1cm}  Conditional Identity
+\item[] $(p \lor \lnot q) \lor r$  \hspace{1cm}  Associative Law
+\item[] $(\lnot q \lor p) \lor r$  \hspace{1cm}  Associative Law
+\item[] $\lnot q \lor (p \lor r)$  \hspace{1cm}  Associative Law
+\item []$q \rightarrow (p \lor r)$ \hspace{1cm}  Conditional Identity
+\end{enumerate}
+
+    Since the Left Side and the Right Side are logically equivalent.
+    \[
+        q \rightarrow (p \lor r) \equiv q \rightarrow (p \lor r)
+    \]
+
+    The following statement must also be true.
+    \[
+        \lnot p \rightarrow (q \rightarrow r) \equiv q \rightarrow (p \lor r)
+    \]
+    \begin{flushright}
+        $\blacksquare$
+    \end{flushright}    
+\end{homeworkProblem}
+
+
+
+\end{document}
