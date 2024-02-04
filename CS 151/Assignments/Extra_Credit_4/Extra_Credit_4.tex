@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Extra Credit 4} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1}
+\begin{itemize}
+    \item[] Prove the following statement using a proof by contrapositive.
+    \begin{itemize}
+        \item[1.] For every non-zero real number $x$, if $x$ is irrational, then $\frac{1}{x}$ is irrational.
+        \item[] 
+        \item[] \textbf{Statement:} $p = \text{"x is irrational"}$, $q = \frac{1}{x} \text{"is irrational"}$
+        \item[] \textbf{Contrapositive:} $\lnot p \rightarrow \lnot q$ $\equiv$ If $x$ is rational, then $\frac{1}{x}$ is rational
+    \end{itemize}
+    \begin{proof}
+        \begin{theorem}
+            For every non-zero real number $x$, if $x$ is irrational, then $\frac{1}{x}$ is irrational.
+        \end{theorem}
+        \begin{definition}
+            A rational number is a number that can be expressed as the quotient or fraction $\frac{p}{q}$ of two integers, a numerator $p$ and a non-zero denominator $q$.
+        \end{definition}
+        \begin{definition}
+            An irrational number is a number that cannot be expressed as the quotient or fraction $\frac{p}{q}$ of two integers, a numerator $p$ and a non-zero denominator $q$.
+        \end{definition}
+        \begin{itemize}
+            \item[] \textbf{Let:} $x$ be a non-zero real number, $p$ and $q$ be integers, and $q \neq 0$.
+            \item[] \textbf{Assume:} $x$ is rational.
+        \end{itemize}
+        \begin{align*}
+            x &= \frac{p}{q} \\
+            \frac{1}{x} &= \frac{q}{p} \\
+        \end{align*}
+        \begin{itemize}
+            \item[] Since $p$ and $q$ are integers that can be expressed as a quotient of two integers $\frac{p}{q}$, then $\frac{1}{x}$ is rational given $x$ is a non-zero number.
+            \item[] Since, $x$ is rational, then $\frac{1}{x}$ is rational.
+            \item[] Therefore, for every non-zero real number $x$, if $x$ is irrational, then $\frac{1}{x}$ is irrational.
+        \end{itemize}
+    \end{proof}
+\end{itemize}
+
+
+
+\end{document}
