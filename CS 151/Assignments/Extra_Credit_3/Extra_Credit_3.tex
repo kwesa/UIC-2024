@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage[margin=15mm]{geometry}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Extra Credit 3} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1}
+\begin{itemize}
+    \item[] Prove the following statement using a direct proof.
+    \begin{itemize}
+        \item[1.] If $m + n$ and $n + p$ are odd integers, where $m$, $n$, and $p$ are integers, then $m + p$ is even.
+    \begin{proof}
+        \begin{theorem}
+            If $m + n$ and $n + p$ are odd integers, where $m$, $n$, $p$, $j$, $k$, $l$ are integers, then $m + p$ is even.
+        \end{theorem}
+        \begin{definition}
+            An integer $n$ is odd if there exists an integer $k$ such that $n = 2k + 1$.
+            An integer $n$ is even if there exists an integer $k$ such that $n = 2k$.
+        \end{definition}
+        \begin{align*}
+            m + n &= 2k + 1\\
+            n + p &= 2j + 1 \\
+            m + p &= (m + n) + (n + p) - n - n \\
+            &= (2k + 1) + (2j + 1) - n - n \\
+            &= 2k + 2j + 2n \\
+            &= 2(k + j + n) \\
+            l &= (k + j + n) \\
+            m + p &= 2l \\
+        \end{align*}
+        \item[] Since $m + p = 2l$, where $l$ is an integer, $m + p$ is even.
+        \end{proof}
+        \end{itemize}   
+    
+
+    \end{itemize}
+
+\end{document}
