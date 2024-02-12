@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+\usepackage[makeroom]{cancel}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 2.6}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q2.6] For any real number $x$, $x + |x - 4| \geq 4$
+    \item[] \textbf{Logical statement:} $\forall x \in \mathbb{R}, x + |x - 4| \geq 4$
+    \item[] \textbf{Thoughts on the problem: } We can prove this problem by cases. We can show that the inequality holds for all real numbers $x$.
+\end{itemize}
+\subsection*{Proof by Cases}
+\begin{proof}
+    For any real number $x$, $x + |x - 4| \geq 4$
+        
+        \begin{itemize}
+            \item[] \textbf{Case 1:} $x + |x - 4| \geq 4$ when $x \geq 4$
+            \begin{align*}
+            x + |x - 4| &\geq 4 \\
+            x + x + 4 &\geq 4 \\
+            2x + 4 &\geq 4 \\
+            2x &\geq 0 \\
+            x &\geq 0
+            \text{ This is true because our assumption is that $x \geq 4$}
+            \end{align*}
+            \item[] \textbf{Case 2:} $x + |x - 4| \geq 4$ when $x < 4$
+            \begin{align*}
+            x + |x - 4| &\geq 4 \\
+            x + x + 4 &\geq 4 \\
+            2x + 4 &\geq 4 \\
+            2x &\geq 0 \\
+            x &\geq 0
+            \text{ This is true because our assumption is that $x < 4$}
+            \end{align*}
+            \item[] \textbf{Case 3:} $x + |x - 4| \geq 4$ when $x = 4$
+            \begin{align*}
+            x + |x - 4| &\geq 4 \\
+            4 + |4 - 4| &\geq 4 \\
+            4 + 0 &\geq 4 \\
+            4 &\geq 4
+            \text{ This is true because our assumption is that $x = 4$}
+            \end{align*}
+            \item[] \textbf{Conclusion:} The inequality $x + |x - 4| \geq 4$ holds for all real numbers $x$.
+            \item[] Therefore, for any real number $x$, $x + |x - 4| \geq 4$
+            \end{itemize}
+\end{proof}
+\end{document}

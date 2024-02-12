@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1.3}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q1.3] Every dog runs or eats. Every dog that eats but doesn't run, sleeps.
+    Therefore, every dog that doesn't sleep, runs.
+    \item[] Let $R(x)$ be "x runs", $E(x)$ be "x eats", $S(x)$ be "x sleeps", the domain of $x$ consists of all dogs.
+    \item[] \textbf{Compound Logic Form: } $(\forall x ((R(x) \lor E(x))) \land \forall x ((E(x) \land \neg R(x)) \rightarrow S(x))) \rightarrow \forall x (\neg S(x) \rightarrow R(x))$
+    \item[] \textbf{Argument Form:}
+    \begin{equation*}
+        \begin{aligned}
+            &\forall x ((R(x) \lor E(x))) \\
+            &\forall x ((E(x) \land \neg R(x)) \rightarrow S(x)) \\
+            \hline
+            &\therefore \forall x (\neg S(x) \rightarrow R(x))
+        \end{aligned}
+    \end{equation*}
+    \item[] \textbf{Validate Argument:}
+     \begin{proof}
+        \begin{align*}
+            &\forall x ((R(x) \lor E(x))) \tag{Hypothesis} \\
+            &\forall x ((E(x) \land \neg R(x)) \rightarrow S(x)) \tag{Hypothesis} \\
+            &\forall x (\neg S(x) \rightarrow R(x)) \tag{Conclusion} \\
+            &\text{Let } x \text{ be an arbitrary dog} \\
+            &\text{Assume } \neg S(x) \tag{Assumption} \\
+            &\text{Assume } \neg R(x) \tag{Assumption} \\
+            &E(x) \land \neg R(x) \tag{Conjunction Introduction} \\
+            &E(x) \land \neg R(x) \rightarrow S(x) \tag{Universal Instantiation} \\
+            &S(x) \tag{Modus Ponens} \\
+            &\neg S(x) \land S(x) \tag{Conjunction} \\
+            &\neg \neg R(x) \tag{Negation} \\
+            &R(x) \tag{Double Negation} \\
+            &\neg S(x) \rightarrow R(x) \tag{Conditional} \\
+            &\forall x (\neg S(x) \rightarrow R(x)) \tag{Universal Instantiation} \\
+            &\boxed { \therefore \forall x (\neg S(x) \rightarrow R(x))} \tag{Conclusion} 
+        \end{align*}
+    \end{proof}       
+\end{itemize}
+\end{document}

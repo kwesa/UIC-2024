@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1.2}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q1.2] There is a cat that doesn't purr. Every cat that is happy or hungry, purrs. 
+    Therefore, there is a cat that isn't happy.
+    \item[] Let $P(x)$ be "x purrs", $H(x)$ be "x is happy", $G(x)$ be "x is hungry", the domain is all cats.
+    \item[] \textbf{Compound Logic Form: } $(\exists x \neg P(x) \land \forall x (H(x) \lor G(x) \lor P(x))) \rightarrow \exists x \neg H(x)$
+    \item[] \textbf{Argument Form:}
+    \begin{equation*}
+        \begin{aligned}
+            & \exists x \neg P(x) \\
+            & \forall x (H(x) \lor G(x) \lor P(x)) \\
+             \hline
+            &\therefore \exists x \neg H(x)
+        \end{aligned}
+    \end{equation*}
+    \item[] \textbf{Validate Argument: }
+    \begin{proof}
+        \begin{align*}
+            & \exists x \neg P(x) & \text{Hypothesis} \\
+            & \forall x (H(x) \lor G(x) \lor P(x)) & \text{Hypothesis} \\
+            & \neg P(a) & \text{Existential Instantiation} \\
+            & H(a) \lor G(a) \lor P(a) & \text{Universal Instantiation} \\
+            & \neg H(a) & \text{Modus Tollens} \\
+            & \boxed{\exists x \neg H(x)} & \text{Existential Generalization}
+        \end{align*}
+    \end{proof}
+\end{itemize}
+\end{document}

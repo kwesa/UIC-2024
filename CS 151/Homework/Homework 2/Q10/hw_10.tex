@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+\usepackage[makeroom]{cancel}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 3}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q3] Prove that for any integer $n$, $n$ is odd if and only if $5n +3$ is even.
+    Indicate which proof methods you used, as well as the assumptions (what you suppose)
+    and the conclusions (what you need to show) of the proof.
+    \item[] \textbf{Logical statement:} $\forall n \in \mathbb{Z}, n \text{ is odd} \Leftrightarrow 5n + 3 \text{ is even}$
+    \item[] \textbf{Simplify Variables:} Let $n = N(x))$ and $5n + 3 = E(y)$ $x, y \in \mathbb{Z} x=2k, y = 2k+1$ for some $k \in \mathbb{Z}$ 
+    \item[] \textbf{Rewrite the statement:} $\forall x, y \in \mathbb{Z} N(y) \Leftrightarrow E(x)$
+    \item[] \textbf{Define: } Even: $x = 2n$ for some $n \in \mathbb{Z}$
+    \item[] \textbf{Define: } Odd: $x = 2n + 1$ for some $n \in \mathbb{Z}$
+    \item[] \textbf{Thoughts on the problem: } We can prove this problem by contradiction. We can assume that $n$ is odd and $5n + 3$ is odd
+    \item[] \textbf{Contradiction:} $\lnot p \land \lnot q$ which is
+    \begin{equation*}
+        \begin{aligned}
+            &\lnot(\forall x, y \in \mathbb{Z} N(y) \Leftrightarrow E(x)) \\
+            &\lnot(\forall x, y \in \mathbb{Z} (N(y) \Rightarrow E(x)) \land (E(x) \Rightarrow N(y))) \\
+            &\lnot(\forall x, y \in \mathbb{Z} (\lnot N(y) \lor E(x)) \land (\lnot E(x) \lor N(y))) \\
+            &\exists x, y \in \mathbb{Z} \lnot (\lnot N(y) \lor E(x)) \lor \lnot (\lnot E(x) \lor N(y)) \\
+            &\exists x, y \in \mathbb{Z} (N(y) \land \lnot E(x)) \lor (E(x) \land \lnot N(y)) \\
+        \end{aligned}
+    \end{equation*}
+    \item[] \textbf{More thoughts on the problem: } I'm going to need to do two cases for the proof by contradiction one for $n$ being odd and $5n + 3$ being even and the other for $n$ being even and $5n + 3$ being odd.
+    I will have to show that both cases lead to a contradiction because they are tied together by an "OR" statement.
+\end{itemize}
+\subsection*{Proof by Contradiction}
+\begin{proof}
+    \begin{itemize}
+    \item[] \textbf{Hypothesis: } For any integer $n$, $n$ is odd if and only if $5n + 3$ is even.
+    \item[] \textbf{Contradiction:} There exists an integer $n$ such that $n$ is odd and $5n + 3$ is odd or there exists an integer $n$ such that $n$ is even and $5n + 3$ is even.
+    \item[] \textbf{Define Set: }$n, k, l \in \mathbb{Z}$
+    \item[]
+    \item[] \textbf{Case 1:} $n$ is odd and $5n + 3$ is odd
+        \begin{align*}
+        n &= 2k + 1 \\
+        5n + 3 &= 2l + 1 \\
+        5(2k + 1) + 3 &= 2l + 1 \\
+        10k + 5 + 3 &= 2l + 1 \\
+        10k + 8 &= 2l + 1 \\
+        10k + 7 &= 2l \\
+        \end{align*}
+        \item[] This is a contradiction because $10k + 7$ is odd and $2l$ is even.
+    \item[] \textbf{Case 2:} $n$ is even and $5n + 3$ is even
+        \begin{align*}
+        n &= 2k \\
+        5n + 3 &= 2l \\
+        5(2k) + 3 &= 2l \\
+        10k + 3 &= 2l
+        \end{align*}
+        \item[] This is a contradiction because $10k + 3$ is odd and $2l$ is even.
+    \item[] \textbf{Conclusion:} The hypothesis is true because both cases lead to a contradiction.
+    \item[] Therefore, for any integer $n$, $n$ is odd if and only if $5n + 3$ is even.
+    \end{itemize}
+\end{proof}
+
+\end{document}

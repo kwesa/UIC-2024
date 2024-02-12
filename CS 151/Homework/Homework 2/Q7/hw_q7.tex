@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+\usepackage[makeroom]{cancel}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 2.4}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q2.4] The average of any odd integer and any even integer is not an integer.
+    \item[] \textbf{Logical statement:} $\forall x, y \in \mathbb{Z}, \frac{x + y}{2} \notin \mathbb{Z}$
+    \item[] \textbf{Define: } Even: $x = 2n$ for some $n \in \mathbb{Z}$
+    \item[] \textbf{Define: } Odd: $x = 2n + 1$ for some $n \in \mathbb{Z}$
+    \item[] \textbf{Thoughts on the problem: } We can prove this problem by contradiction. We can assume that the average of any odd integer and any even integer is an integer. Then we can show that this assumption leads to a contradiction.
+    \item[] \textbf{Contradiction:} $\lnot p$ which is $\lnot \frac{x + y}{2} \in \mathbb{Z}$
+\end{itemize}
+\subsection*{Proof by Contradiction}
+\begin{proof}
+        
+        \begin{itemize}
+            \item[]Using the definition of an odd number assume that the average of any odd integer and any even integer is an integer. Then there exists an integer $k$ such that $\frac{x + y}{2} = k$ and there exists an integer $l$ such that $x = 2l + 1$ and $y = 2l$.
+            \item[] \textbf{Defining Set: }$x, y, z, l, k \in \mathbb{Z}$
+            \begin{align*}
+            \frac{x + y}{2} &= z \\
+            x &= 2l + 1 \\
+            y &= 2l \\
+            \end{align*}
+            \item[] Using the definition of an even number we can substitute $x$ and $y$ into the equation $\frac{x + y}{2} = k$.
+            \begin{align*}
+            \frac{2l + 1 + 2l}{2} &= z \\
+            \frac{4l + 1}{2} &= z \\
+            2l + \frac{1}{2} &= z \\
+            \end{align*}
+            \item[] We can see that $2l + \frac{1}{2}$ is not an integer. This is a contradiction to our assumption that the average of any odd integer and any even integer is an integer. 
+            \item[] Therefore, the average of any odd integer and any even integer is not an integer.
+            \end{itemize}
+\end{proof}
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+\usepackage[makeroom]{cancel}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 2.5}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q2.5] For any integer $x$ and $y$, if $x+y$ is odd, then $x$ and $y$ have opposite parity.
+    \item[] \textbf{Define: } Even Number: A number is even if it is divisible by 2, or if it is equal to $2k$ for some integer $k$.
+    \item[] \textbf{Define: } Odd Number: A number is odd if it is not even, or if it is equal to $2k + 1$ for some integer $k$.
+    \item[] \textbf{Logical Variables:} $ S(x)= x + y = 2k + 1, p = x, q = y$
+    \item[] \textbf{Expressed as a Universal Statement:} $\forall x, y \in \mathbb{Z}, S(x) \rightarrow p \land q$
+    \item[] \textbf{Thoughts on the problem: } We can prove this problem by contradiction. We can assume that $x + y$ is odd and $x$ and $y$ have the same parity. 
+    Then we can show that this assumption leads to a contradiction.
+    \item[] \textbf{Contradiction:} $p \land \lnot q$ 
+\end{itemize}
+\subsection*{Proof by Contradiction}
+\begin{proof}
+    
+    \begin{itemize}
+        \item[]Using the definition of an odd number assume that $x + y$ is odd and $x$ and $y$ have the same parity. Then there exists an integer $k$ such that $x + y = 2k + 1$ and there exists an integer $l$ such that $x = 2l$ and $y = 2l$.
+        \item[] \textbf{Defining Set: }$x, y, k, l, i \in \mathbb{Z}$
+        \begin{align*}
+        x + y &= 2k + 1 \\
+        x &= 2l \\
+        y &= 2l \\
+        2l + 2l &= 2k + 1 \\
+        4l &= 2k + 1 \\
+        2(2l) &= 2k + 1 \\
+        i &= 2l \\
+        2i &= 2k + 1 \\
+        \end{align*}
+        \item[] This is a contradiction because $2i$ is even and $2k + 1$ is odd.
+        \item[] Therefore, the assumption that $x + y$ is odd and $x$ and $y$ have the same parity is false. Our original statement is true.
+    \end{itemize}
+\end{proof}
+\end{document}

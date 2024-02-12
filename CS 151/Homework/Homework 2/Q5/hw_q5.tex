@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+\usepackage[makeroom]{cancel}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 2.2}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q2.2] For any integers $x$, $y$, and $z$ with $x \neq y$, if $z$ is divisible by both $x - y$, then $z$ is divisible by $y - x$.
+    \item[] \textbf{Define: } Divisibility: $a$ is divisible by $b$ if there exists an integer $c$ such that $a = bc$.
+    \item[] \textbf{Compound Proposition:} $\forall x, y, z \in \mathbb{Z}, x \neq y (z = (x - y)k \rightarrow z = (y - x)l)$
+    \item[] \textbf{Simple Proposition:} $z = (x - y)k  = p$ and $z = (y - x)l = q$
+    \item[] \textbf{Logical Statement:} $p \rightarrow q$
+    \item[] \textbf{Thoughts on the problem: } We can prove this problem by contradiction. We can assume that $z$ is divisible by $x - y$ and $z$ is not divisible by $y - x$. 
+    Then we can show that this assumption leads to a contradiction.
+    \item[] \textbf{Contradiction:} $p \land \lnot q$ to prove we'll have to show that $p \land \lnot q \equiv \text{False}$
+\end{itemize}
+\subsection*{Proof by Contradiction}
+\begin{proof}
+    
+    \begin{itemize}
+        \item[]Using the definition of divisibility assume that $z$ is divisible by $x - y$ and $z$ is not divisible by $y - x$. Then there exists an integer $k$ such that $z = (x - y)k$ and there exists an integer $l$ such that $z \neq (y - x)l$.
+        \item[] \textbf{Defining Set: }$x, y, z, k, l \in \mathbb{Z}$ and $x \neq y$
+        \begin{align*}
+        z &= (x - y)k \\
+        z &= (y - x)l \\
+        (x - y)k &= (y - x)l \\
+        k &= \frac{(y - x)l}{(x - y)} \\
+        \text{ Substituting } k \text{ into the first equation: } \\
+        z &= (x - y)\frac{(y - x)l}{(x - y)} \\
+        z &= \cancel{(x - y)}\frac{(y - x)l}{\cancel{(x - y)}} \\ 
+        z &= (y - x)l
+    \end{align*}
+    \item[] Since $z = (y - x)l$, and $z = (x - y)k$ are divisible, then $z$ is divisible by both $x - y$ and $y - x$.
+    \item[] This is a contradiction. Therefore, $z$ is divisible by $y - x$.
+    \end{itemize}
+\end{proof}
+\end{document}

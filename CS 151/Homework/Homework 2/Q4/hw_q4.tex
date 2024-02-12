@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{CS 151 Homework 2:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 2.1}
+\subsection*{The problem}
+\begin{itemize}
+    \item[Q2.1] For any integer $x$, if $x+y > 50$, then $x > 20$ or $y > 30$.
+    \item[] \textbf{Compound Logic Form: } $\forall x \in \mathbb{Z}, \forall y \in \mathbb{Z}, x+y > 50 \rightarrow x > 20 \lor y > 30$
+    \item[] \textbf{Simplify Variables: } $x+y = p, x = q, y = r$
+    \item[] \textbf{Rewrite: } $p \rightarrow q \lor r$
+    \item[] \textbf{Thoughts on the problem:} We can do a direct proof or a contrapositive proof. I will do both.
+    \item[] \textbf{Contrapositive: } $\neg q \land \neg r \rightarrow \neg p$
+\end{itemize}
+\subsection*{Proof by Cases}
+\begin{proof}
+    If $x+y > 50$, then $x > 20$ or $y > 30$.  
+    \begin{align*}
+        \text{Case 1: } & x \leq 20 \text{ and } y \leq 30 \\
+        \text{Let } & x = 20 \text{ and } y = 30 \text{ they are both integers.} \\
+        \text{Then } & x+y = 50 \text{ this is True.}\\
+        \text{Case 2: } & x \leq 20 \text{ and } y > 30 \\
+        \text{Let } & x = 20 \text{ and } y = 31 \text{ they are both integers.} \\
+        \text{Then } & x+y = 51 \text{ this is True.}\\
+        \text{Case 3: } & x > 20 \text{ and } y \leq 30 \\
+        \text{Let } & x = 21 \text{ and } y = 30 \text{ they are both integers.} \\
+        \text{Then } & x+y = 51 \text{ this is True.}\\
+        \text{Case 4: } & x > 20 \text{ and } y > 30 \\
+        \text{Let } & x = 21 \text{ and } y = 31 \text{ they are both integers.} \\
+        \text{Then } & x+y = 52 \text{ this is True.}\\
+        \end{align*}
+    Therefore, since it is true forall cases, the statement is true.
+\end{proof}
+\subsection*{Proof by Contrapositive}
+\begin{proof}
+    If $x \leq 20$ and $y \leq 30$, then $x+y \leq 50$.  
+    \begin{align*}
+        \text{Let } & x = 20 \text{ and } y = 30 \text{ they are both integers.} \\
+        \text{Then } & x+y = 50 \text{ this is True.}\\      
+        \end{align*}
+    Since, the contrapositive is true, the original statement is true. By the law of contrapositive.
+\end{proof}
+\end{document}
