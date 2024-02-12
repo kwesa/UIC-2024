@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{soul}
+\usepackage[margin=15mm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+% Set up fancy header
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer
+\rhead{Keith Wesa} % Right header
+\lhead{MAT Written Assingment 3:} % Left header
+\rfoot{Page \thepage} % Right footer
+
+\author{Keith Wesa}
+\title{MAT 215 - Written Homework 1}
+\date{\today}
+
+\begin{document}
+\section*{Question 1}
+\subsection*{\textbf{Answer each of the following.}}
+\subsubsection*{a.} Write the negation of each of the following quantified statements. (Note:
+You can use the observations we made in about nested quantifies to determine the negations)
+\begin{itemize}
+\item[i.] \textbf{Quantified Statement: } $\forall x \in \mathbb{R}, \exists M \in \mathbb{N} \text{ s.t } x < M$
+\item[] \textbf{Negation with logical operators: } $\lnot(\forall x \in \mathbb{R}, \exists M \in \mathbb{N} \text{ s.t } x < M)$
+\item[] \textbf{Using De Morgan's Law: } $\lnot(\forall x \in \mathbb{R}) \lor \lnot(\exists M \in \mathbb{N} \text{ s.t } x < M)$
+\item[] \textbf{Negation: } $\exists x \in \mathbb{R}, \forall M \in \mathbb{N} \text{ s.t } x \geq M$
+\item[]
+\item[ii.] \textbf{Quantified Statement: }   $\exists q \in \mathbb{Q}, \forall n, m \in \mathbb{Z}, \frac{mq}{n} = 2$
+\item[] \textbf{Negation with logical operators: } $\lnot(\exists q \in \mathbb{Q}, \forall n, m \in \mathbb{Z}, \frac{mq}{n} = 2)$
+\item[] \textbf{Using De Morgan's Law: } $\lnot(\exists q \in \mathbb{Q}) \lor \lnot(\forall n, m \in \mathbb{Z}, \frac{mq}{n} = 2)$
+\item[] \textbf{Negation: } $\forall q \in \mathbb{Q}, \exists n, m \in \mathbb{Z}, \frac{mq}{n} \neq 2$
+\end{itemize}
+\subsubsection*{b.} Explicitly find the negation of the following quantified statement. (Hint: Express the statement
+in nested layers and follow the same method we used in class/notes to determine the negation.)
+\begin{itemize}
+    \item[i.] \textbf{Quantified Statement: } $\exists a \in A \text{ s.t } \forall b \in B \text{ and } c \notin C, \exists d \notin D \text{ and } e \in E \text{ s.t } f \in F, P(a,b,c,d,e,f)$
+    \item[] \textbf{With logical operators: } $((\exists a \in A \rightarrow (\forall b \in B \land c \notin C, \exists d \notin D \land e \in E)) \rightarrow f \in F, P(a,b,c,d,e,f))$
+    \item[] \textbf{Negation with logical operators: } $\lnot((\exists a \in A \rightarrow (\forall b \in B \land c \notin C, \exists d \notin D \land e \in E)) \rightarrow f \in F, P(a,b,c,d,e,f))$
+    \item[] \textbf{Using De Morgan's Law: } $\lnot(\exists a \in A) \lor \lnot((\forall b \in B \land c \notin C, \exists d \notin D \land e \in E)) \lor \lnot(f \in F, P(a,b,c,d,e,f))$
+    \item[] \textbf{Negation: } $\forall a \in A, \exists b \in B \lor c \in C, \forall d \in D \lor e \notin E, f \notin F \lor \lnot P(a,b,c,d,e,f)$
+\end{itemize}
+\section*{Question 2}
+\subsection*{\textbf{For each statement, write it out in words as a sentence. Is the statement true or false?}}
+\subsubsection*{a.} $\forall x \in \mathbb{R}, \exists M \in \mathbb{N} \text{ s.t } x < M$
+\begin{itemize}
+    \item[a.] \textbf{Statement: } For all $x$ in the set of real numbers, there exists a set of natural numbers $M$ such that $x$ is less than $M$.
+    \item[] \textbf{True or False: } This statement is True given the case $x = 0$ and $M = 1$.
+\end{itemize}
+    \subsection*{b.} $\forall \theta \in [0, 2\pi], (\sin(\theta) > cos(\theta)) \lor (cos(\theta) > sin(\theta) \lor (\theta = \frac{\pi}{4}))$
+\begin{itemize}
+    \item[b.] \textbf{Statement: } For all $\theta$ in the interval $[0, 2\pi]$, the sine of $\theta$ is greater than the cosine of $\theta$ or the cosine of $\theta$ is greater than the sine of $\theta$ or $\theta$ is equal to $\frac{\pi}{4}$.
+    \item[] \textbf{True or False: } This statement is True given the case $\theta = \frac{\pi}{4}$, because $sin{\frac{\pi}{4}} = cos{\frac{\pi}{4}}$.
+    \item[] 
+\end{itemize}
+\subsection*{c.} $\exists a \in \mathbb{Z}, \text{ s.t } (\forall b \in \mathbb{N},ab < b) \land (\forall c \in (0,1), ac \notin (0,1))$
+\begin{itemize}
+    \item[c.] \textbf{Statement: } There exists an integer $a$ such that for all natural numbers $b$, $ab$ is less than $b$ and for all real numbers $c$ in the exclusive interval of 0 to 1, $ac$ is not in the exclusive interval of 0 to 1. 
+    \item[] \textbf{True or False: } This statement is True given the case $a = 0$, because $0(b) < b$ and $0(c) \notin (0,1)$.
+\end{itemize}
+
+\section*{Question 3}
+\begin{itemize}
+    \item[i.] $\lnot(A \land (B \lor \lnot A))$
+    \item[ii.] $\lnot B \lor \lnot A$
+\end{itemize}
+\subsection*{a.} Prove that the statements (i) and (ii) are logically equivalent by comparing their truth tables.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A & B & $\lnot A$ & $B \lor \lnot A$ & $A \land (B \lor \lnot A)$ & $\lnot(A \land (B \lor \lnot A))$ & $\lnot B \lor \lnot A$ \\ \hline
+T & T & F & T & T & F & F \\ \hline
+T & F & F & F & F & T & T \\ \hline
+F & T & T & T & F & T & T \\ \hline
+F & F & T & T & F & T & T \\ \hline    
+\end{tabular}
+\end{table}
+\subsection*{b.} Prove that the statements (i) and (ii) are logically equivalent /textbf{without} using truth tables.
+\begin{proof}
+    We can prove that the statements (i) and (ii) are logically equivalent by using the laws of logic. 
+    \begin{align*}
+        \lnot(A \land (B \lor \lnot A)) &\equiv \lnot A \lor \lnot(B \lor \lnot A) \text{ (De Morgan's Law)} \\
+        &\equiv \lnot A \lor (\lnot B \land A) \text{ (De Morgan's Law)} \\
+        &\equiv (\lnot A \lor \lnot B) \land (\lnot A \lor A) \text{ (Distributive Law)} \\
+        &\equiv \lnot B \lor \lnot A \text{ (Identity Law)} 
+    \end{align*}
+    Therefore, $\lnot(A \land (B \lor \lnot A)) \equiv \lnot B \lor \lnot A$.
+\end{proof}
+
+    \end{document}
